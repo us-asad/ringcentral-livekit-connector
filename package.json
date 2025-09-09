@@ -1,0 +1,21 @@
+{
+  "name": "ringcentral-livekit-connector",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@livekit/rtc-node": "^0.13.18",
+    "ringcentral-softphone": "^1.2.2",
+    "wait-for-async": "^0.7.13",
+    "werift-rtp": "^0.8.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1"
+  }
+}
