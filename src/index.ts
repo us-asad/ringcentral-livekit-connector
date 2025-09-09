@@ -59,7 +59,7 @@ export class RingCentralLiveKitConnector {
         (callSession as any).on("audioPacket", (rtpPacket: any) => {
             try {
                 const encoded = new Uint8Array(rtpPacket.payload.buffer, rtpPacket.payload.byteOffset, rtpPacket.payload.byteLength)
-                const pcm = callSession.decoder.decode(encoded)
+                const pcm = callSession.decoder.decode(encoded as any)
                 const pcmSamples = new Int16Array(pcm.buffer, pcm.byteOffset, pcm.byteLength / Int16Array.BYTES_PER_ELEMENT)
 
                 source.captureFrame(new AudioFrame(pcmSamples, this.sampleRate, this.channels, pcmSamples.length))

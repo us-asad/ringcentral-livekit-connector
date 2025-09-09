@@ -1,14 +1,16 @@
 {
   "name": "ringcentral-livekit-connector",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "1.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Asad Usmonov <asad@usmonov.tech>",
+  "license": "MIT",
+  "description": "RingCentral LiveKit Connector",
   "dependencies": {
     "@livekit/rtc-node": "^0.13.18",
     "ringcentral-softphone": "^1.2.2",
